@@ -12,6 +12,8 @@ describe User do
   it { should respond_to(:name) }
   it { should respond_to(:email) }
   it { should respond_to(:phone_number) }
+  it { should respond_to(:organized_rides) }
+  it { should respond_to(:group_rides) }
 
   it { should be_valid }
 end
