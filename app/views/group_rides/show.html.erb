@@ -1,0 +1,6 @@
+<h1><%= @group_ride.title %></h1>
+
+<p>
+  Organized by:
+  <%= link_to @group_ride.organizer.name, user_path(@group_ride.organizer) %>
+</p>

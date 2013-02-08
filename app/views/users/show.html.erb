@@ -1,10 +1,20 @@
-<h1><%= "#{@user.name}'s Information" %></h1>
+<h1><%= @user.name %>'s Information</h1>
 
 
 <p>
-  <%= "Email: #{@user.email}" %>
+  Email: <%= @user.email %>
 </p>
 
 <p>
-  <%= "Phone number: #{@user.phone_number}" %>
+  Phone number: <%= @user.phone_number %>
 </p>
+
+<p>
+  Rides <%= @user.name %> organized:
+  <ul>
+    <% @user.organized_rides.each do |ride| %>
+      <li><%= link_to ride.title, group_ride_path(ride) %></li>
+    <% end %>
+  </ul>
+</p>
+
