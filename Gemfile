@@ -10,6 +10,7 @@ gem 'factory_girl_rails'
 
 group :development do
   gem 'rspec-rails'
+  gem 'capybara'
 end
 
 

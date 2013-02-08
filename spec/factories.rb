@@ -10,6 +10,6 @@ FactoryGirl.define do
   factory :group_ride do
     sequence(:title) { |t| "Ride #{n}"}
     description "A fun ride"
-
+    association :organizer, factory: :user
   end
 end

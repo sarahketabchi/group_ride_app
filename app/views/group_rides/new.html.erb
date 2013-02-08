@@ -1,0 +1,11 @@
+<h1>Create a new group bike ride!</h1>
+
+<%= form_for(@group_ride) do |f|%>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%#= add a hidden field for the organizer %>
+<% end %>

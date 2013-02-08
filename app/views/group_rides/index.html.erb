@@ -1,0 +1,7 @@
+<h1>Group Rides</h1>
+
+<ul>
+  <% @group_rides.each do |group_ride| %>
+    <li><%= link_to group_ride.name, group_ride_path(group_ride) %></li>
+  <% end %>
+</ul>

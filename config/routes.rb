@@ -1,5 +1,6 @@
 GroupRideApp::Application.routes.draw do
   resources :group_rides
+  resources :users
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
