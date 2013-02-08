@@ -2,6 +2,9 @@
 
 <ul>
   <% @group_rides.each do |group_ride| %>
-    <li><%= link_to group_ride.name, group_ride_path(group_ride) %></li>
+    <li>
+      <%= link_to group_ride.title, group_ride_path(group_ride) %>
+      <%= link_to "<i class='icon-trash'></i>".html_safe, group_ride_path(group_ride), :method => :delete, data: { confirm: "You sure?" } %>
+    </li>
   <% end %>
 </ul>

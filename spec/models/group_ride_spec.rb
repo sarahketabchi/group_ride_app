@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe GroupRide do
+describe "GroupRide" do
   before do
     @user = User.create(name: "John",
                      email: "john@example.com",
@@ -12,8 +12,6 @@ describe GroupRide do
 
   subject { @group_ride }
 
-  it { should respond_to(:title) }
-  it { should respond_to(:description) }
   it { should respond_to(:organizer_id) }
   it { should respond_to(:riders) }
   it { should respond_to(:organizer) }
