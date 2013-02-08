@@ -18,3 +18,12 @@
   </ul>
 </p>
 
+<p>
+  Rides <%= @user.name %> is attending:
+  <ul>
+    <% @user.group_rides.each do |ride| %>
+      <li><%= link_to ride.title, group_ride_path(ride) %></li>
+    <% end %>
+  </ul>
+</p>
+
