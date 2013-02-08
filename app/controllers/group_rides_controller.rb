@@ -20,4 +20,10 @@ class GroupRidesController < ApplicationController
   def show
     @group_ride = GroupRide.find(params[:id])
   end
+
+  def destroy
+    @group_ride = GroupRide.find(params[:id])
+    @group_ride.destroy
+    redirect_to group_rides_path
+  end
 end

@@ -7,6 +7,7 @@ gem 'rails', '3.2.11'
 
 gem 'sqlite3'
 gem 'factory_girl_rails'
+gem 'bcrypt-ruby'
 
 
 group :development do

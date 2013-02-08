@@ -3,7 +3,9 @@ require 'spec_helper'
 describe User do
   let(:user) { User.create!(name: "Meghan",
                      email: "meghan@example.com",
-                     phone_number: "444-222-3333") }
+                     phone_number: "444-222-3333",
+                     password: "expass",
+                     password_confirmation: "expass") }
 
   subject { user }
 
@@ -42,6 +44,4 @@ describe User do
 
     it { should_not be_valid }
   end
-
-
 end
