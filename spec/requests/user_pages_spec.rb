@@ -11,10 +11,12 @@ describe "User pages" do
       fill_in "user_name", with: "John"
       fill_in "user_email", with: "john@example.com"
       fill_in "user_phone_number", with: "777-777-7777"
+      fill_in "user_password", with: "expass"
+      fill_in "user_password_confirmation", with: "expass"
     end
 
-    # it "should increase the total number of users" do
-    #   expect { click_button "Sign up!" }.to change(User, :count).by(1)
-    # end
+    it "should increase the total number of users" do
+      expect { click_button "Sign up!" }.to change(User, :count).by(1)
+    end
   end
 end
