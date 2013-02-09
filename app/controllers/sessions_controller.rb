@@ -16,6 +16,6 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out
-    redirect_to users_path
+    redirect_to group_rides_path
   end
 end
