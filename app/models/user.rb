@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :phone_number, :password, :password_confirmation
   has_secure_password
 
+  before_save :create_remember_token
+
   # email validation
   before_save { |user| user.email = email.downcase }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -22,4 +24,10 @@ class User < ActiveRecord::Base
   #has_many :attending_rides
   has_many :attending_rides, :dependent => :destroy
   has_many :group_rides, :through => :attending_rides
+
+
+  private
+    def create_remember_token
+      self.remember_token = SecureRandom.urlsafe_base64
+    end
 end
